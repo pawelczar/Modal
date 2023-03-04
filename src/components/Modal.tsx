@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
@@ -5,7 +6,7 @@ import { PropsWithChildren, ReactElement, ReactNode, useState } from 'react'
 import classes from './Modal.module.css'
 
 type childrenProps = {
-  children: JSX.Element | JSX.Element[]
+  children: ReactNode
   isOpen: boolean | null
   onClick?: (e: any) => void
 }
@@ -15,11 +16,13 @@ const Modal = ({ children, isOpen, onClick }: childrenProps) => {
 
   return (
     <>
-      {isOpen && (
-        <div className={classes.modalBackground} onClick={onClick}>
-          {children}
-        </div>
-      )}
+      {isOpen &&
+        createPortal(
+          <div className={classes.modalBackground} onClick={onClick}>
+            {children}
+          </div>,
+          document.getElementById('modal') as HTMLElement,
+        )}
     </>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { createPortal } from 'react-dom'
 import './App.css'
 import Modal from './components/Modal'
 
@@ -6,9 +7,7 @@ function App() {
   const [isVisible, setIsVisible] = useState<boolean | null>(false)
 
   const toggle = () => {
-    // e.stopPropagation()
     setIsVisible(!isVisible)
-    // console.log(e.target)
   }
 
   console.log('toggle status:', isVisible)

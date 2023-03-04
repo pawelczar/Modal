@@ -1,7 +1,8 @@
+import { ReactNode } from 'react'
 import classes from './Content.module.css'
 
 type contentProp = {
-  children: JSX.Element | JSX.Element[]
+  children: ReactNode
 }
 
 const Content = ({ children }: contentProp) => {
