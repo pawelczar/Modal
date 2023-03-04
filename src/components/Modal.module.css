@@ -11,14 +11,3 @@
   flex-direction: column;
   cursor: pointer;
 }
-
-/* .modalContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  pointer-events: none;
-  box-shadow: 5px 5px 10px black;
-  pointer-events: none;
-} */

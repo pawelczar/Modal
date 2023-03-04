@@ -2,7 +2,7 @@ import { createPortal } from 'react-dom'
 import Header from './Header'
 import Content from './Content'
 import Footer from './Footer'
-import { PropsWithChildren, ReactElement, ReactNode, useState } from 'react'
+import { ReactElement, ReactNode, useState } from 'react'
 import classes from './Modal.module.css'
 
 type childrenProps = {

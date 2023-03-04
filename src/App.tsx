@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { createPortal } from 'react-dom'
 import './App.css'
 import Modal from './components/Modal'
 
